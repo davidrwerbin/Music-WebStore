@@ -65,8 +65,6 @@ Welcome to our ASP.NET-based music instrument shop website. This platform is ded
 ![Countries](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Countries.png)
 
 ![Suppliers](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Suppliers.png)
-![OrderDetails](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/OrderDetails.png)
-
 
 
 #### Banking Services
