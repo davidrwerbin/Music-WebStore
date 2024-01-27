@@ -32,9 +32,10 @@ Welcome to our ASP.NET-based music instrument shop website. This platform is ded
 ## System Architecture
 
 ### Database Structure
-
+![Mutual Relationship](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Mutual%20Relationship.png)
 
 ### Folder Structure
+![Folders](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Folders.png)
 
 
 ### Classes
@@ -45,18 +46,34 @@ Welcome to our ASP.NET-based music instrument shop website. This platform is ded
 - **Product In Bag Class:** Management of products in the shopping cart.
 - **ShoppingBag Class:** Shopping cart functionalities.
 - **UserService Class:** User-related database operations.
-- **OrderService Class:** 
-- **UserDetails Class:**
-- **ProductService Class:** 
+- **OrderService Class:** Order transaction management
+- **UserDetails Class:** User profile handling.
+- **ProductService Class:** Product inventory management.
 
 ### Network Services on the Site
 
 #### Music Store Services
 
-- **Database:**
-#### Banking Services
+- ***Databases:***
+  
+![Products](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Products.png)
+![Orders](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Orders.png)
+![Users](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Users.png)
+![OrderDetails](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/OrderDetails.png)
 
-- **Integration:**
+![Categories](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Categories.png)
+![Countries](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Countries.png)
+
+![Suppliers](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/Suppliers.png)
+![OrderDetails](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/OrderDetails.png)
+
+
+
+#### Banking Services
+- ***Databases:***
+
+ ![CreditTable](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/CreditTable.png)
 
 ### Site Map
+![SiteMap](https://github.com/davidrwerbin/Music-WebStore/blob/main/Images/SiteMap.png)
 
