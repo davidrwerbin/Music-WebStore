@@ -1,0 +1,142 @@
+﻿/* Reset default styles and set a base font family */
+.h1, h2, h3, p, ul, li 
+{
+  
+    padding: 0;
+    font-family: Arial, sans-serif;
+      
+}
+
+
+    
+
+
+
+/* Set a default background color and font color */
+.body {
+    background-image: url(Images/home.jpg);
+    background-repeat:no-repeat;
+}
+/* Style the header */
+.header, hola {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+.nav, hola {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+/* Style the main sections */
+main {
+    padding: 20px;
+}
+
+.hero {
+    background-image: url('path/to/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.featured-products {
+    margin-top: 40px;
+}
+
+.featured-product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categories {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-card {
+    flex-basis: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+    margin-top: 40px;
+}
+
+.gradient-custom {
+/* fallback for old browsers */
+background: #6a11cb; background-size:cover;
+
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)); background-size:cover;
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)); background-size:cover;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    height: 305px;
+}
+
+header {
+    background-color: blue;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+    nav a:hover {
+        background-color: #555;
+    }

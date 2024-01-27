@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckCreditCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CSC" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCreditCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckCreditCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCreditCardBalanc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NewBalnce" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreditNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCreditCardBalancResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerBalnce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreditNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerBalnceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCustomerBalnceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckCreditCardSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="CheckCreditCardSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardBalancSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardBalanc" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardBalancSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardBalancResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerBalnceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalnce" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerBalnceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalnceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BankWebServiceSoap">
+    <wsdl:operation name="CheckCreditCard">
+      <wsdl:input message="tns:CheckCreditCardSoapIn" />
+      <wsdl:output message="tns:CheckCreditCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardBalanc">
+      <wsdl:input message="tns:UpdateCreditCardBalancSoapIn" />
+      <wsdl:output message="tns:UpdateCreditCardBalancSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalnce">
+      <wsdl:input message="tns:GetCustomerBalnceSoapIn" />
+      <wsdl:output message="tns:GetCustomerBalnceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BankWebServiceSoap" type="tns:BankWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckCreditCard">
+      <soap:operation soapAction="http://tempuri.org/CheckCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardBalanc">
+      <soap:operation soapAction="http://tempuri.org/UpdateCreditCardBalanc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalnce">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerBalnce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BankWebServiceSoap12" type="tns:BankWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckCreditCard">
+      <soap12:operation soapAction="http://tempuri.org/CheckCreditCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardBalanc">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCreditCardBalanc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalnce">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerBalnce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BankWebService">
+    <wsdl:port name="BankWebServiceSoap" binding="tns:BankWebServiceSoap">
+      <soap:address location="http://localhost:49592/MusicBank/BankWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BankWebServiceSoap12" binding="tns:BankWebServiceSoap12">
+      <soap12:address location="http://localhost:49592/MusicBank/BankWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
